@@ -1,0 +1,13 @@
+<!--pages/userPage/userPage.wxml-->
+<view class="weui-cells weui-cells_after-title">
+  <navigator url="../changeUserInfo/changeuserinfo" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+    <view class="weui-cell__hd">
+      <image class = "userImage" src="{{userInfo.avatarUrl}}" style="margin-right: 20px;vertical-align: middle;width:70px; height: 70px;"></image>
+    </view>
+    <view style="display:flex; flex-direction:column; line-height:48rpx">
+    <view style="display:flex" class="userInfo">姓名：{{userInfo.user_name}}\n</view>
+    <view style="display:flex" class="userInfo">学号：{{userInfo.user_id}}\n</view>
+    </view>
+    <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+  </navigator>
+</view>

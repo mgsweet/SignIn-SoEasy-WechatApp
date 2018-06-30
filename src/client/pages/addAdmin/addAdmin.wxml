@@ -1,0 +1,20 @@
+<!--pages/addAdmin/addAdmin.wxml-->
+<view>
+    <!--课程信息-->
+    <view class='courseId' style='margin-top:8%;'>
+        <text>课程ID：</text>
+        <text>{{course_id}}</text>
+    </view>
+    <view class='courseName'>
+        <view> {{course_name}} {{course_info}}</view>
+    </view>
+
+    <!--二维码-->
+    <view class="img-box">  
+      <canvas bindtap="onPreviewQrc" hidden="{{canvasHidden}}"   
+                style="width: 686rpx;height: 686rpx;background:#f1f1f1;" canvas-id="qrcCanvas"/>  
+    </view> 
+    <view  class="hint">
+        <text>可通过扫描本二维码成为班级管理员</text>
+    </view>
+</view>

@@ -1,0 +1,38 @@
+<!--pages/signInRecord/signinrecord.wxml-->
+
+<!--总体签到情况-->
+<view wx:if="{{member_num > 0}}" class="section_1" style='margin-top:5%;'>
+  <view class='title'>
+      <text class='hint'>总体签到情况</text>
+  </view>
+  <view class='totalRecord' style='display:flex;flex-direction:row;'>
+    <text class='hint'>签到次数：</text>
+    <text class='total'>{{total}}</text>
+    <text class='hint'>签到率：</text>
+    <text class='rate'>{{rate}}%</text>
+  </view>
+
+</view>
+
+<!--个体签到情况-->
+<view wx:if="{{member_num > 0 }}" class='section_2' style='margin-top:5%;'>
+  <view class='title'>
+    <text class='hint'>个体签到情况</text>
+  </view>
+  <view class='personalRecord' style='display:flex;flex-direction:row;'>
+    <text class='hint'>学号</text>
+    <text class='hint'>姓名</text>
+    <text class='hint'>记录</text>
+  </view>
+  <view wx:if="{{member_num > 0 }}" wx:for="{{member}}" wx:key="{{item.open_id}}" class="secton_2">
+   <view wx:if="{{item.level == 3}}"  class="personalRecord" hover-class="weui-cell_active" style='display:flex;flex-direction:row;'>
+     <text class='id'>{{item.user_id}}</text> 
+     <text class='name'>{{item.user_name}}</text>
+     <text class='record'>{{item.hit}}/{{total}}</text> 
+    </view>
+  </view>
+</view>
+
+<view wx:if="{{member_num == 0}}"  class='section_3' style='margin-top:5%;'>
+  <text> 暂时无人加入</text>
+</view> 

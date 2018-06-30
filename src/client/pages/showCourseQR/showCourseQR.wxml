@@ -1,0 +1,19 @@
+<!--pages/showCourseQR/showCourseQR.wxml-->
+<view>
+    <!--课程信息-->
+    <view class='courseId' style='margin-top:8%;'>
+        <text>课程ID：</text>
+        <text>{{course_id}}</text>
+    </view>
+    <view class='courseName'>
+        <text>{{course_name}}</text>
+    </view>
+
+    <!--二维码-->
+    <view class="img-box">  
+      <image src = "{{qrImgSrc}}" style="width: 686rpx;height: 686rpx;background:#f1f1f1;"/>  
+    </view> 
+    <view  class="hint">
+        <text>可通过扫描本二维码进入班级</text>
+    </view>
+</view>

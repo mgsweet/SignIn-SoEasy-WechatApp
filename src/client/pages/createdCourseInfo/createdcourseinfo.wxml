@@ -1,0 +1,37 @@
+<!--pages/createdcourseinfo/createdcourseinfo.wxml-->
+<view class="weui-cells weui-cells_after-title" >
+  <view class='briefInfo' style='flex-direction:column'>
+    <view class='courseInfo'>课程id:{{course_id}}</view>
+    <view class='courseName'>{{course_name}} {{course_info}}</view>
+    <view class='courseInfo'>已发起{{total}}次签到</view>
+  </view>
+  <navigator url="../signInfo/signinfo?course_id={{course_id}}&course_name={{course_name}}&course_info={{course_info}}&task={{task}}&course_time={{course_time}}&level={{level}}" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+    <view class="weui-cell__bd">发起签到</view>
+    <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+  </navigator>
+</view>
+<view class="weui-cells weui-cells_after-title" style='margin-top: 5%'>
+  <navigator url="../signInRecord/signinrecord?course_id={{course_id}}&course_name={{course_name}}&course_info={{course_info}}&task={{task}}&level={{level}}" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+    <view class="weui-cell__bd">签到统计</view>
+    <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+  </navigator>
+  <navigator wx:if="{{level == 1}}" url="../memberListInfo/memberlistinfo?course_id={{course_id}}&course_name={{course_name}}&course_info={{course_info}}&task={{task}}&course_time={{course_time}}&level={{level}}" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+    <view class="weui-cell__bd">管理成员</view>
+    <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+  </navigator>
+  <navigator url="../showCourseQR/showCourseQR?course_id={{course_id}}&course_name={{course_name}}&course_info={{course_info}}" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+    <view class="weui-cell__bd">显示班级二维码</view>
+    <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+  </navigator>
+  <navigator url="../changeCourseInfo/changecourseinfo?course_id={{course_id}}&task={{task}}&course_name={{course_name}}&course_info={{course_info}}" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+    <view class="weui-cell__bd">修改课程信息</view>
+    <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+  </navigator>
+  <navigator url="../getExcel/getExcel?course_id={{course_id}}" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+    <view class="weui-cell__bd">导出签到统计到邮箱</view>
+    <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+  </navigator>
+</view>
+  <button wx:if="{{level == 1}}" class="buttonView" style="margin-bottom: 0% " bindtap='deleteCourseConfirm' >
+    <text class="usermotto">删除课程</text>
+  </button>

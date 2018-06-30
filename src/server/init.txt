@@ -1,0 +1,81 @@
+CREATE TABLE Users (
+  `open_id` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  user_name
+  
+  PRIMARY KEY (`open_id`)
+)
+??
+
+create table Courses (
+    course_id int auto_increment,
+    course_name char(20) COLLATE utf8mb4_unicode_ci not null,
+    course_info char(200) COLLATE utf8mb4_unicode_ci not null,
+    count int not null,
+    task int not null,
+    primary key(course_id)
+);
+
+create table Relation (
+    open_id varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+	course_id int not null,
+    level int not null,
+    record char(100) not null,
+	primary key(open_id, course_id),
+	constraint `Users_To_Relation` foreign key(open_id) references Users(open_id)
+		on delete cascade on update cascade,
+	constraint `Courses_To_Relation` foreign key(course_id) references Courses(course_id)
+		on delete cascade on update cascade
+);
+
+
+create table Signin_List (
+    course_id int not null,
+    course_time char(30) not null,
+    latitude float,
+    longitude float,
+    need_location boolean not null,
+    pin int,
+    need_pin boolean not null,
+	primary key(course_id),
+    constraint `Courses_To_List` foreign key(course_id) references Courses(course_id)
+		on delete cascade on update cascade
+);
+
+create table Record (
+    open_id varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+	course_id int not null,
+    signin_time char(30) not null,
+    count int not null,
+	primary key(open_id, course_id, count),
+	constraint `Users_To_Record` foreign key(open_id) references Users(open_id)
+		on delete cascade on update cascade,
+	constraint `Courses_To_Record` foreign key(course_id) references Courses(course_id)
+		on delete cascade on update cascade
+);
+
+//修改用户信息接口
+updateUserInfoUrl: `${host}/weapp/updateuser`,
+//获取用户所有课程列表
+getCourseListUrl: `${host}/weapp/getcourselist`,
+//根据课程id查询课程简略信息
+searchCourseUrl: `${host}/weapp/searchcourse`,
+//根据课程id查询课程详细信息
+searchCourseDetailUrl: `${host}/weapp/serchcoursedetail`,
+//加入课程
+joinCourseUrl: `${host}/weapp/joincourse`,
+//创建课程
+createCourseUrl: `${host}/weapp/createcourse`,
+//修改课程信息
+changeCourseUrl: `${host}/weapp/changecourse`,
+//根据课程id获取已加入课程的记录
+getJointCourseRecordUrl: `${host}/weapp/getjointcoursedetail`,
+//根据课程id获取可管理的课程详细记录
+getOwnedCourseRecordUrl: `${host}/weapp/getownedcourse`,
+//删除课程
+deleteCourseUrl: `${host}/weapp/deletecourse`,
+//删除成员
+deleteMemberUrl: `${host}/weapp/deletemember`,
+//修改成员权限
+changePermisionUrl: `${host}/weapp/deletepermission`,
+//进行签到
+signInUrl: `${host}/weapp/signin`,

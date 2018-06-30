@@ -1,0 +1,50 @@
+/* pages/authorization/authorization.wxss */
+.my_view {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.my_view.first {
+    margin-top:250rpx;
+}
+
+.my_logo {
+    border-radius: 50%; 
+    width: 250rpx;
+    height: 250rpx;
+}
+
+.my_header {
+    color:#044C27;
+    margin-top:20rpx;
+    font-size:37rpx;
+    font-weight:600;
+}
+
+.my_Subtitle {
+    color:#044C27;
+    font-size:30rpx;
+}
+
+.second {
+    margin-top: 80rpx;
+}
+
+.my_button {
+    border-radius:100rpx / 75rpx;
+    width:400rpx;
+    border:solid 1rpx;
+    color:grey;
+    background-color: transparent;
+}
+
+.my_button:active {
+    background-color: grey;
+}
+
+.my_button_text {
+    color:black;
+    font-size: 40rpx;
+}

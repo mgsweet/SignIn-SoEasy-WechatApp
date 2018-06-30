@@ -1,0 +1,34 @@
+/* pages/memberListInfo/memberlistinfo.wxss */
+
+page,
+.page {
+  background-color: #F8F8F8;
+}
+
+.jointClassInfo {
+  width: 100%;
+  align-items: center;
+  display: flex;
+}
+
+.jointClassInfo text{
+  margin: 16rpx;
+  color: #004D26;
+  font-size: 36rpx;
+}
+
+.weui-cells,
+.weui-cell,
+.weui-cells_after-title,
+.weui-cell_access {
+  border-width: 0 0 1rpx 0;
+  border-color: #F8F8F8;
+  border-style: solid;
+  background-color: #FFFFFF;
+}
+
+.section_3 {
+  text-align: center;
+  color: #064C28;
+  font-size: 32rpx;
+}

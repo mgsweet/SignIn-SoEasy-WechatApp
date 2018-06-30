@@ -1,0 +1,38 @@
+<!--pages/jointcourseinfo/jointcourseinfo.wxml-->
+
+<view class="weui-cells weui-cells_after-title" >
+  <view class='briefInfo' style='flex-direction:column'>
+    <view class='courseInfo'>{{course_name}} {{course_info}}</view>
+    <view class='courseInfo'>{{total-miss}}/{{total}}</view>
+  </view>
+  <view class="displayRecord">
+    <view wx:for="{{record}}" wx:key="{{item.index}}" style="display:flex"> 
+      <image wx:if="{{item.is_sign == 1}}" src="/image/circle_g.png"/>
+      <image wx:if="{{item.is_sign == 0}}" src="/image/circle_r.png"/>
+    </view>
+  </view>
+  <text>\n</text>
+</view>
+
+<!-- <view class="weui-cells weui-cells_after-title" wx:if="{{miss>0}}" style="margin-top: 5%">
+  <view class='briefInfo' style='flex-direction:column'>
+    <view class='courseInfo'>缺课纪录</view>
+    <view wx:for="{{record}}" wx:key="{{item.index}}">
+      <view class='courseInfo' wx:if="{{item.is_sign == 0}}">第{{item.index+1}}节课缺勤</view>
+    </view>
+  </view>
+</view> -->
+
+<view class="weui-cells weui-cells_after-title" wx:if="{{total>0}}" style="margin-top: 5%">
+  <view class='briefInfo' style='flex-direction:column'>
+    <view class='courseInfo'>签到纪录</view>
+    <view wx:for="{{record}}" wx:key="{{item.index}}">
+      <view class='courseInfo' wx:if="{{item.is_sign == 0}}">第{{item.index+1}}节课缺勤</view>
+      <view class='courseInfo' wx:if="{{item.is_sign == 1}}">第{{item.index+1}}节课签到成功{{item.time}}</view>
+    </view>
+  </view>
+</view>
+
+<button class="buttonView" style="margin-bottom: 0% " bindtap='quitCourseConfirm' >
+  <text class="usermotto">退出课程</text>
+</button>

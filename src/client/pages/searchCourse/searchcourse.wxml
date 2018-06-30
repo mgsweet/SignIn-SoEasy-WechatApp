@@ -1,0 +1,52 @@
+<!--pages/searchCourse/searchcourse.wxml-->
+<view class="page__bd">
+  <view class="weui-search-bar">
+    <view class="weui-search-bar__form">
+      <view class="weui-search-bar__box">
+        <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+        <input type="text" class="weui-search-bar__input" placeholder="" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" />
+        <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+          <icon type="clear" size="14"></icon>
+        </view>
+      </view>
+      <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+        <icon class="weui-icon-search" type="search" size="14"></icon>
+        <view class="weui-search-bar__text">输入课程id</view>
+      </label>
+    </view>
+    <view class="weui-search-bar__cancel-btn" bindtap="searchInput">确认</view>
+  </view>
+  <view class="weui-cells searchbar-result" wx:if="{{inputVal.length > 0}}">
+    <view class="weui-cells searchbar-result" wx:if="{{search_flag==-1}}">
+          <view class='briefInfo' style='flex-direction:column'>
+            <view class='courseName'>查无此课程</view>
+          </view>
+    </view>
+    <view wx:if="{{search_flag==1}}" wx:for="{{search_course}}" wx:key="{{item.course_id}}" class="weui-cells weui-cells_after-title"> 
+      <navigator url="../searchCourseInfo/searchcourseinfo?course_id={{item.course_id}}" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <view class='briefInfo' style='flex-direction:column'>
+          <view class='courseInfo'>课程ID:{{item.course_id}}</view>
+          <view class='courseName'>{{item.course_name}} {{item.course_info}}</view>
+        </view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+      </navigator>
+    </view>
+  </view>
+
+  <view class="weui-cells searchbar-result" wx:if="{{inputVal.length <= 0}}">
+
+    <view class="weui-cells weui-cells_after-title">
+
+      <button bindtap='creatCourse' class="weui-cell weui-cell_access" hover-class="weui-cell_active" style="border-radius:0rpx">
+        <view class="weui-cell__bd">创建课程</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+      </button>
+
+      <button bindtap='scanQR' class="weui-cell weui-cell_access" hover-class="weui-cell_active" style="border-radius:0rpx">
+        <view class="weui-cell__bd">扫码入班</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+      </button>
+      
+    </view>
+  </view>
+</view>

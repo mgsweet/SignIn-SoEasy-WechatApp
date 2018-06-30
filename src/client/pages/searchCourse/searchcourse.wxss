@@ -1,0 +1,55 @@
+/* pages/searchCourse/searchcourse.wxss */
+page {
+  background:#F8F8F8;
+}
+
+button::after {
+  border-radius: 0;
+}
+
+.weui-cell_access {
+  background: #FFF;
+  text-align: left;
+  height:115rpx;
+}
+
+.weui-cell__bd {
+  color: #004D26;
+  font-size: 36rpx;
+}
+
+.weui-cells {
+  margin-top:0;
+}
+
+.briefInfo {
+  display: block;
+  text-align: left;
+  padding: 16rpx;
+  background-color: #FFF;
+}
+
+.courseInfo {
+  color: #004D26;
+  font-size: 30rpx;
+  margin: 4rpx;
+}
+
+.courseName {
+  font-size: 40rpx;
+  margin: 4rpx;
+}
+
+.weui-cell__ft_in-access {
+padding-right: 330px;
+position: absolute;
+}
+
+.noClass {
+  font-size: 40rpx;
+  margin: 4rpx;
+}
+
+.weui-search-bar {
+  background-color: inherit;
+}

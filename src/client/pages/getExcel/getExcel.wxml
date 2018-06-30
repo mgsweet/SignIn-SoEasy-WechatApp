@@ -1,0 +1,17 @@
+<!--pages/changeCourseInfo/changecourseinfo.wxml-->
+ <view wx:>
+  <!--邮箱输入框-->
+  <view class="section">
+    <text class='banner'>邮箱地址</text>
+    <input class="input" value="{{course_name}}" placeholder="请输入您的邮箱地址..." auto-focus bindinput='emailAddressChange'/>
+  </view>
+
+  <view class="hint">
+    <text> 注意：邮件可能会被当作垃圾邮件</text>
+  </view>
+
+  <!--提交按钮-->
+  <button class="buttonView" style="margin-top: 20% " bindtap='sendEmail' >
+    <text class="usermotto">确认发送</text>
+  </button>
+</view>

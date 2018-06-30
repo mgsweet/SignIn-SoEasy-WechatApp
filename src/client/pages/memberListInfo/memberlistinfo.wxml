@@ -1,0 +1,16 @@
+<!--pages/memberListInfo/memberlistinfo.wxml-->
+<view wx:if="{{member_num > 1 }}" wx:for="{{member_list}}" wx:key="{{item.open_id}}">
+  <navigator wx:if="{{item.level!= 1}}" url="../memberDetail/memberdetail?course_id={{course_id}}&course_name={{course_name}}&course_info={{course_info}}&task={{task}}&course_time={{course_time}}&level={{level}}&member_open_id={{item.member_open_id}}&member_id={{item.user_id}}&member_name={{item.user_name}}&member_open_id={{item.open_id}}&member_level={{item.level}}" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+  <view class='jointClassInfo'>
+    <text>{{item.user_name}}</text>
+    <text>{{item.user_id}}</text>
+    <!-- <text wx:if="{{item.level==1}}"> (创建者) </text> -->
+    <text wx:if="{{item.level==2}}"> (管理员) </text>
+    <text wx:if="{{item.level==3}}"> (成员)   </text>
+  </view>
+    <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+  </navigator>
+</view>
+<view wx:if="{{member_num == 1}}"  class='section_3' style='margin-top:5%;'>
+  <text> 暂时无人加入</text>
+</view>

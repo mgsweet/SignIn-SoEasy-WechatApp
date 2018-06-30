@@ -1,0 +1,22 @@
+<!--pages/userinfo.wxml-->
+ <view wx:>
+  <view class="userinfo">
+    <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname" style='margin-top:5%;'>请输入新的个人信息</text>
+  </view>
+
+  <!--姓名输入框-->
+  <view class="section">
+    <input class="input" placeholder="姓名" auto-focus bindinput='nameChange'/>
+  </view>
+
+  <!--学号输入框-->
+  <view class="section" >
+    <input type="number" class="input" placeholder="学号/工号" auto-focus bindinput='idChange'/>
+  </view>
+
+  <!--提交按钮-->
+  <button class="buttonView" style="margin-top: 10% " bindtap='submit' >
+    <text class="usermotto">提交</text>
+  </button>
+</view>

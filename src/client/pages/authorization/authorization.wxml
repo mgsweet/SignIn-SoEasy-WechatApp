@@ -1,0 +1,18 @@
+<!--pages/authorization/authorization.wxml-->
+<view class="my_view">
+  <view class="my_view first">
+    <image class="my_logo" src='../../image/sysuIcon.png'/>
+    <text class="my_header" wx:if="{{!userDenyAuth}}">签到SoEasy</text>
+    <text class="my_header" wx:if="{{userDenyAuth}}">温馨提示</text>
+    <text class="my_Subtitle" wx:if="{{code}}">点击登陆提交用户信息</text>
+    <text class="my_Subtitle" wx:if="{{!code && !userDenyAuth}}">授权中...</text>
+    <text class="my_Subtitle" wx:if="{{userDenyAuth}}">拒绝授权将无法体验正常功能</text>
+    <text class="my_Subtitle" wx:if="{{userDenyAuth}}">您可再次登陆重新授权</text>
+  </view>
+  <view class="my_view second" wx:if="{{code}}">
+    <button class="my_button" open-type='getUserInfo' bindgetuserinfo='updateUserInfo'>
+      <text class="my_button_text">登录</text>
+    </button>
+  </view>
+</view>
+

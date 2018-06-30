@@ -1,0 +1,15 @@
+<!--pages/memberdetail/memberdetail.wxml-->
+<view class='memberInfo'>
+  <text class='memberName'>名字:{{member_name}}</text> 
+  <text class='memberID'>学号:{{member_id}}</text>
+</view>
+  
+  <button wx:if="{{level == 1 && member_level == 3}}"  class="buttonView" style="margin-top: 10% " bindtap='setManager' >
+    <text class="usermotto">指定为管理员</text>
+  </button>
+  <button wx:if="{{level == 1 && member_level == 2}}"  class="buttonView" style="margin-top: 10% " bindtap='cancelManager' >
+    <text class="usermotto">取消管理员</text>
+  </button>
+  <button wx:if="{{level == 1 && member_level != 1}}" class="buttonView" style="margin-top: 10% " bindtap='deleteMember' >
+    <text class="usermotto">删除成员</text>
+  </button> 

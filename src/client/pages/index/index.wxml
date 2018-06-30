@@ -1,0 +1,66 @@
+<!--pages/index/index.wxml-->
+<!--首页的内容-->
+
+<!--无可签到课程-->
+<view wx:if="{{task_course.length == 0}}" class="section_1" style='margin-top:5%;' style='display:flex;flex-direction:column;'>
+  <text class='hint'>当前无可签到课程</text>
+  <text class='hint'>下拉刷新</text>
+</view>
+
+<view>
+  <!--当前课程可签到-->
+  <view wx:for="{{task_course}}" wx:key="{{item.course_id}}" class="weui-cells weui-cells_after-title signIn"> 
+    <navigator wx:if="{{item.level==3&&item.task == 1}}" url="../signInCourse/signincourse?course_id={{item.course_id}}&course_name={{item.course_name}}&course_info={{item.course_info}}&task={{item.task}}&level={{item.level}}" class="weui-cell weui-cell_access signIn_mem" hover-class="weui-cell_active" >
+      <view style='display:flex;flex-direction:column;width=100%;' class='signInfo_mem'>
+        <text class='title'>当前课程可签到</text>
+        <text class='courseName'>{{item.course_name}}</text>
+        <text class='leftTime'>剩余时间：{{item.min}} m {{item.sec}} s</text>
+      </view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </navigator>
+    
+  <!--您发起签到的课程-->
+    <navigator wx:if="{{item.level<3}}" url="../signInfo/signinfo?course_id={{item.course_id}}&course_name={{item.course_name}}&course_info={{item.course_info}}&task={{item.task}}&level={{item.level}}" class="weui-cell weui-cell_access signIn_admin" hover-class="weui-cell_active" >
+      <view style='display:flex;flex-direction:column;width=100%;' class='signInfo_admin'>
+        <text class='title'>您当前发起签到的课程</text>
+        <text class='courseName'>{{item.course_name}}</text>
+        <text class='leftTime'>剩余时间：{{item.min}} m {{item.sec}} s</text>
+      </view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </navigator> 
+  <!--已经完成签到的课程-->
+    <navigator wx:if="{{item.task == 2}}" url="../jointCourseInfo/jointcourseinfo?course_id={{item.course_id}}&course_name={{item.course_name}}&course_info={{item.course_info}}&task={{item.task}}&level={{item.level}}" class="weui-cell weui-cell_access signed_admin" hover-class="weui-cell_active" >
+      <view style='display:flex;flex-direction:column;width=100%;' class='signedInfo_admin'>
+        <text class='title'>您已完成该课程签到</text>
+        <text class='courseName'>{{item.course_name}}</text>
+        <text class='leftTime'>剩余时间：{{item.min}} m {{item.sec}} s</text>        
+      </view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </navigator>  
+  </view>
+</view>
+
+<!--可管理的课程-->
+<view  style="margin-top: 5%;">               
+  <view wx:for="{{created_course}}" wx:key="{{item.course_id}}" class="jointClass"> 
+      <navigator url="../createdCourseInfo/createdcourseinfo?course_id={{item.course_id}}&course_name={{item.course_name}}&course_info={{item.course_info}}&task={{item.task}}&level={{item.level}}" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <view class='jointClassInfo'>
+          <text class='jointClassName'>{{item.course_name}}</text>
+          <image wx:if="{{item.level == 1}}" src='../../image/user_full.png' style='width:36rpx;height:36rpx;'></image>
+          <image wx:if="{{item.level == 2}}" src='../../image/man_full.png' style='width:36rpx;height:36rpx;'></image>
+        </view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+      </navigator>  
+  </view>
+
+<!--已加入的课程-->
+               
+  <view wx:for="{{joint_course}}" wx:key="{{item.course_id}}" class="jointClass"> 
+      <navigator url="../jointCourseInfo/jointcourseinfo?course_id={{item.course_id}}&course_name={{item.course_name}}&course_info={{item.course_info}}&task={{item.task}}&level={{item.level}}" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <text class='weui-cell__bd jointClassName'>{{item.course_name}}</text>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+      </navigator>  
+  </view>
+</view>
+
+

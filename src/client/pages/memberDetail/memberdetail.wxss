@@ -1,0 +1,23 @@
+/* pages/memberdetail/memberdetail.wxss */
+
+.memberName,
+.memberID {
+  font-size: 40rpx;
+  color: #004D26;
+}
+
+.memberInfo {
+  margin-top: 5%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.buttonView {
+  font-size: 36rpx;
+  padding: 12rpx;
+  border-radius: 72rpx;
+  width: 350rpx;
+  background-color: #FFF;
+  border: 1rpx solid silver;
+}

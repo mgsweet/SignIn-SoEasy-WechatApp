@@ -1,0 +1,19 @@
+/* pages/addAdmin/addAdmin.wxss */
+.courseId,
+.hint {
+  font-size: 36rpx;
+  color: #004D26;
+  text-align: center;
+}
+
+.courseName {
+  font-size: 56rpx;
+  text-align: center;
+}
+
+.img-box {
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}

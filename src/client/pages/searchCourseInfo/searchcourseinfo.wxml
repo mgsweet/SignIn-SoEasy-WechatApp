@@ -1,0 +1,14 @@
+<!--pages/courseinfo/courseinfo.wxml-->
+
+<!--课程信息-->
+<view class='courseInfo' style='margin-top:8%;'>
+  <text class='id'>课程ID：{{course_id}}</text>
+  <text class='name'>{{course_name}}</text>
+  <!-- <text class='creater'>课程创建者：{{course_creator}}</text> -->
+</view>
+
+
+<!--加入课程按钮-->
+<button wx:if="{{level==-1}}"class="buttonView" style="margin-top: 5% " bindtap='joinCourse' >
+  <text class="usermotto">加入该课程</text>
+</button>

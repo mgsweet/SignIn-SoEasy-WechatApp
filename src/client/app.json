@@ -1,0 +1,52 @@
+{
+  "pages": [
+    "pages/authorization/authorization",
+    "pages/index/index",
+    "pages/changeUserInfo/changeuserinfo",
+    "pages/searchCourseInfo/searchcourseinfo",
+    "pages/jointCourseInfo/jointcourseinfo",
+    "pages/createdCourseInfo/createdcourseinfo",
+    "pages/createNewCourse/createnewcourse",
+    "pages/signInCourse/signincourse",
+    "pages/memberDetail/memberdetail",
+    "pages/signInfo/signinfo",
+    "pages/changeCourseInfo/changecourseinfo",
+    "pages/memberListInfo/memberlistinfo",
+    "pages/userPage/userPage",
+    "pages/showCourseQR/showCourseQR",
+    "pages/signInRecord/signinrecord",
+    "pages/searchCourse/searchcourse",
+    "pages/reg/reg",
+    "pages/addAdmin/addAdmin",
+    "pages/getExcel/getExcel"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "navigationBarTitleText": "签到SoEasy",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "image/index.png",
+        "selectedIconPath": "image/index-fill.png"
+      },
+      {
+        "pagePath": "pages/searchCourse/searchcourse",
+        "text": "添加",
+        "iconPath": "image/plus.png",
+        "selectedIconPath": "image/plus-fill.png"
+      },
+      {
+        "pagePath": "pages/userPage/userPage",
+        "text": "个人",
+        "iconPath": "image/my.png",
+        "selectedIconPath": "image/my-fill.png"
+      }
+    ]
+  }
+}

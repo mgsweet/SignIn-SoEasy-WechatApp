@@ -1,0 +1,28 @@
+/* pages/userPage/userPage.wxss */
+page {
+  background:#F8F8F8;
+}
+.title {
+  text-align: center;
+}
+
+.userName {
+  background-color: #FFF;
+  display: flex;
+}
+
+.userID {
+  background-color: #FFF;
+  display: flex;
+}
+
+.weui-cell__ft_in-access {
+  padding-right: 44px;
+}
+
+.userInfo {
+  color: #004D26;
+  font-size: 30rpx;
+  margin: 4rpx;
+  width:400rpx;
+}

@@ -1,0 +1,37 @@
+/* pages/createdcourseinfo/createdcourseinfo.wxss */
+page {
+  background:#F8F8F8;
+}
+.briefInfo {
+  display: flex;
+  text-align: center;
+  padding: 16rpx;
+  background-color: #FFF;
+}
+
+.courseInfo {
+  color: #004D26;
+  font-size: 30rpx;
+  margin: 4rpx;
+}
+
+.courseName {
+  font-size: 50rpx;
+  margin: 4rpx;
+}
+
+.weui-cell__bd {
+  color: #004D26;
+  font-size: 37rpx;
+}
+
+.buttonView {
+  position: fixed;
+  bottom: 0;
+  width:100%;
+  background-color: #E3212C;
+  border-radius: 0;
+  color: #FFF;
+  text-align: left;
+  font-size: 40rpx;
+}

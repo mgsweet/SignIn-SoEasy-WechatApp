@@ -1,0 +1,81 @@
+/* pages/userinfo.wxss */
+/* pages/home/home.wxss */
+
+.userinfo {
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  margin-top: 10%;
+}
+
+.userinfo-avatar {
+  width: 300rpx;
+  height: 300rpx;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  display: flex;
+  color: #004D26;
+  font-size: 48rpx;
+  align-items: center;
+}
+
+.usermotto {
+  font-size: medium;
+  margin-top: 200px;
+}
+
+.section{
+    text-align: center;
+    margin-top: 5%;
+}
+
+.input{
+    font-size: 36rpx;
+    border: 1rpx solid #004D26;
+    padding: 24rpx;
+    border-radius: 72rpx;
+    margin-left: 72rpx;
+    margin-right: 72rpx;
+}
+
+.buttonView{
+  font-size: 36rpx;
+  padding: 12rpx;
+  border-radius: 72rpx;
+  width: 350rpx;
+  background-color: #FFF;
+  border: 1rpx solid silver;
+}
+
+page,
+.page,
+.page__bd{
+    padding-bottom: 0;
+}
+.weui-tab__content{
+    padding-top: 0px;
+    text-align: center;
+}
+.searchbar-result{
+    margin-top: 0;
+    font-size: 14px;
+}
+.searchbar-result:before{
+    display: none;
+}
+.weui-cell{
+    padding: 12px 15px 12px 35px;
+}
+/* pages/user/user.wxss */
+.weui-cell__bd {
+  font-size: medium;
+  color: #000;
+}
+
+.userImage {
+  border-radius: 7%; 
+}

@@ -1,0 +1,65 @@
+/* pages/sigincourse/signincourse.wxss */
+
+.timeLocation {
+  text-align: center;
+}
+
+.hint,
+.courseId {
+  color: #004D26;
+  font-size: 30rpx;
+  text-align: center;
+  margin: 8rpx;
+}
+
+.time {
+  font-size: 50rpx;
+  margin: 8rpx;
+  font-weight: bold;
+  
+}
+
+.location {
+  font-size: 30rpx;
+  margin: 8rpx;
+
+}
+
+.courseInfo {
+  text-align: center;
+  margin-top: 5%;
+}
+
+.courseName {
+  font-size: 50rpx;
+  margin: 8rpx;
+
+}
+
+.input {
+  text-align: center;
+  font-size: 36rpx;
+  border: 1rpx solid #004D26;
+  padding: 24rpx;
+  border-radius: 72rpx;
+  margin-left: 72rpx;
+  margin-right: 72rpx;
+  margin-top:5%;
+}
+
+.buttonView {
+  border-radius: 50%;
+  height: 320rpx;
+  width: 320rpx;
+  border: solid silver 1rpx;
+  background-color: green;
+  display: table;
+  text-align: center;
+}
+
+.usermotto {
+  color: #FFF;
+  font-size: 80rpx;
+  vertical-align: middle;
+  display: table-cell;
+}

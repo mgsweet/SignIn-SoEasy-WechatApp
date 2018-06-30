@@ -1,0 +1,144 @@
+/* pages/signInfo/signinfo.wxss */
+
+
+.briefInfo {
+  display: flex;
+  text-align: center;
+  padding: 16rpx;
+  background-color: #FFF;
+}
+
+.courseInfo {
+  color: #004D26;
+  font-size: 30rpx;
+  margin: 4rpx;
+}
+
+.locInfo {
+  color: #004D26;
+  font-size: 30rpx;
+  margin-left:104rpx;
+}
+
+.pinInfo {
+  color: #004D26;
+  font-size: 30rpx;
+  margin-left:157rpx;
+}
+
+.courseName {
+  font-size: 50rpx;
+  margin: 4rpx;
+}
+
+.weui-cell__bd {
+  color: #004D26;
+  font-size: 37rpx;
+}
+
+ 
+image {
+width:70rpx;
+height:70rpx;
+margin:23rpx;
+}
+
+.locButton {
+  width:230rpx;
+  height:120rpx;
+  margin-left:80rpx;
+  background-color:#FFF;
+  border-radius:13px;
+  border: 1rpx solid silver;
+}
+
+.locButtonChecked {
+  width:230rpx;
+  height:120rpx;
+  margin-left:80rpx;
+  background-color:#50C37D;
+  border-radius:13px;
+  border: 1rpx solid silver;
+}
+
+.pinButton {
+  width:230rpx;
+  height:120rpx;
+  margin-left:130rpx;
+  background-color:#FFF;
+  border-radius:13px;
+  border: 1rpx solid silver;
+}
+
+.pinButtonChecked {
+  width:230rpx;
+  height:120rpx;
+  margin-left:130rpx;
+  background-color:#50C37D;
+  border-radius:13px;
+  border: 1rpx solid silver;
+}
+.flexView {
+  display:flex;
+  flex-direction:column;
+}
+
+.timeInfo {
+  color: #004D26;
+  font-size: 30rpx;
+  margin-top:156rpx;
+}
+
+.time {
+  color:silver;
+  font-size:27rpx;
+  margin-left:0rpx;
+  margin-top:14rpx;
+}
+
+.timeImage {
+  margin-left:121px;
+  width:35rpx;
+  height:35rpx;
+  margin-top:30rpx;
+}
+
+picker {
+  display:flex;
+}
+
+.usermotto {
+  font-size: medium;
+  margin-top: 200px;
+}
+
+.buttonView{
+  font-size: 36rpx;
+  padding: 12rpx;
+  border-radius: 45rpx;
+  width: 350rpx;
+  background-color: #FFF;
+  border: 1rpx solid silver;
+}
+.buttonViewChecked{
+  font-size: 36rpx;
+  padding: 12rpx;
+  border-radius: 45rpx;
+  width: 350rpx;
+  background-color: #50C37D;
+  border: 1rpx solid silver;
+}
+
+
+.buttonInPicker {
+  width:450rpx;
+  height:95rpx;
+  margin-left:155.5rpx;
+  text-align:left;
+  background-color:#FFF;
+}
+.pinText {
+  color:#FFF;
+  margin-top:-26rpx;
+  font-size:68rpx;
+}

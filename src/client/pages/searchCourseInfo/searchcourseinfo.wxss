@@ -1,0 +1,28 @@
+/* pages/courseinfo/courseinfo.wxss */
+
+.courseInfo {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: #FFF;
+}
+
+.id,
+.creater,
+.disc {
+  font-size: 36rpx;
+  color: #004D26;
+}
+
+.name {
+  font-size: 72rpx;
+}
+
+.buttonView {
+  font-size:36rpx;
+  padding:12rpx;
+  border-radius:72rpx;
+  width:350rpx;
+  background-color:#FFF;
+  border:1rpx solid silver;
+}

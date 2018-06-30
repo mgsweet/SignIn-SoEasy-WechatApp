@@ -1,0 +1,128 @@
+<!--pages/signInfo/signinfo.wxml-->
+<view wx:if="{{task==0}}"class="body-view">
+<view class='briefInfo' style='flex-direction:column' >
+  <view class='courseInfo'>课程id:{{course_id}}</view>
+  <view class='courseName'>{{course_name}} {{course_info}}</view>
+</view>
+
+<!--地点pin码选择-->
+<view style='display:flex;margin-top:8%'>
+  <view class='flexView'>
+    <view class='flexView' hidden="{{need_location==1}}">
+      <view class='locInfo'>地点验证：关</view>
+      <button size="10" plain='{{plain}}' class="locButton" bindtap="location">
+        <image src = "/image/loc_b.png"/>
+      </button>
+    </view>
+    <view class='flexView' hidden="{{need_location==0}}">
+      <view class='locInfo'>地点验证：开</view>
+      <button size="10" plain='{{plain}}' class="locButtonChecked" bindtap="location">
+        <image src = "/image/loc_w.png"/>
+      </button>
+    </view>
+  </view>
+  <view class='flexView'>
+    <view class='flexView' hidden="{{need_pin==1}}">
+      <view class='pinInfo'>PIN验证：关</view>
+      <button size="10" plain='{{plain}}' class="pinButton" bindtap="pin">
+        <image src = "/image/pin_b.png"/>
+      </button>
+    </view>
+    <view class='flexView' hidden="{{need_pin==0}}">
+      <view class='pinInfo'>PIN验证：开</view>
+      <button size="10" plain='{{plain}}' class="pinButtonChecked" bindtap="pin">
+        <image src = "/image/pin_w.png"/>
+      </button>
+    </view>
+  </view>
+</view>
+
+<!--签到时间限制-->
+<view class='briefInfo' style='flex-direction:column' >
+  <text class='timeInfo'>签到时间限制</text>
+</view>
+
+
+<picker bindchange="timeChange" value="{{index}}" range="{{array}}">
+  <button class="buttonInPicker" style='display:flex;flex-direction:row'>
+    <view class="time">{{array[index]}}</view>
+    <image class="timeImage" src = "/image/updown.png"/>
+  </button>
+</picker>
+
+
+<!--提交按钮-->
+<button class="buttonView" style="margin-top: 25% " bindtap='submitTask'>
+  <text class="usermotto">开始签到</text>
+</button>
+</view>
+
+
+
+<!--签到中页面-->
+<view wx:else>
+<view class='briefInfo' style='flex-direction:column' >
+  <view class='courseInfo'>课程id:{{course_id}}</view>
+  <view class='courseName'>{{course_name}} {{course_info}}</view>
+</view>
+
+<!--地点pin码选择-->
+<view style='display:flex;margin-top:8%'>
+  <view class='flexView'>
+    <view class='flexView' hidden="{{need_location==1}}">
+      <view class='locInfo'>地点验证：关</view>
+      <button size="10" plain='{{plain}}' class="locButton">
+        <image src = "/image/loc_b.png"/>
+      </button>
+    </view>
+    <view class='flexView' hidden="{{need_location==0}}">
+      <view class='locInfo'>地点验证：开</view>
+      <button size="10" plain='{{plain}}' class="locButtonChecked">
+        <image src = "/image/loc_w.png"/>
+      </button>
+    </view>
+  </view>
+  <view class='flexView'>
+    <view class='flexView' hidden="{{need_pin==1}}">
+      <view class='pinInfo'>PIN验证：关</view>
+      <button size="10" plain='{{plain}}' class="pinButton">
+        <image src = "/image/pin_b.png"/>
+      </button>
+    </view>
+    <view class='flexView' hidden="{{need_pin==0}}">
+      <view class='pinInfo'>PIN验证：开</view>
+      <button size="10" plain='{{plain}}' class="pinButtonChecked">
+        <view wx:if="{{task==0}}"class="body-view">
+          <image src = "/image/pin_w.png"/>
+        </view>
+        <view wx:else>
+          <view class="pinText">{{pin}}</view>
+        </view>
+      </button>
+    </view>
+  </view>
+</view>
+
+<!--签到时间限制-->
+<view class='briefInfo' style='flex-direction:column' >
+  <text class='timeInfo'>签到时间限制</text>
+</view>
+
+
+<picker bindchange="timeChange" value="{{index}}" range="{{array}}" disabled="true">
+  <button class="buttonInPicker" style='display:flex;flex-direction:row'>
+    <view class="time">{{array[index]}}</view>
+    <image class="timeImage" src = "/image/updown.png"/>
+  </button>
+</picker>
+
+
+<button class="buttonViewChecked" style="margin-top: 25% ">
+  <text class="usermotto" style="color:#FFF">签到中...剩余{{min}}m{{sec}}s</text>
+</button>
+
+</view>
+
+
+
+

@@ -1,0 +1,19 @@
+<!--pages/reg/reg.wxml-->
+<view class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    <text class="userinfo-nickname">欢迎使用中山大学签到系统</text>
+    <text class="userinfo-nickname">很高兴遇见你</text>
+    <text class='userinfo-nickname'>请您创建一位用户信息</text>
+  </view>
+
+  <!--姓名输入框-->
+    <input class="input" placeholder="姓名" auto-focus bindinput='nameChange'/>
+
+  <!--学号输入框-->
+    <input type="number" class="input" placeholder="学号或工号" auto-focus bindinput='idChange'/>
+
+  <!--提交按钮-->
+  <button class="buttonView" style="margin-top: 10% " bindtap='submit' >
+    <text class="usermotto">提交</text>
+  </button>

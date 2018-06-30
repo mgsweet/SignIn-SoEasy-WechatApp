@@ -1,0 +1,19 @@
+<!--pages/changeCourseInfo/changecourseinfo.wxml-->
+ <view wx:>
+  <!--课程名字输入框-->
+  <view class="section">
+    <text class='banner'>课程名字</text>
+    <input class="input" value="{{course_name}}" placeholder="请输入课程名字..." auto-focus bindinput='nameChange'/>
+  </view>
+
+  <!--备注信息输入框-->
+  <view class="section" style="margin-top: 8% ">
+    <text class='banner'>课程信息</text>
+    <input type="input" value="{{course_info}}" class="input" placeholder="请输入班级名字（选填）" auto-focus bindinput='infoChange'/>
+  </view>
+
+  <!--提交按钮-->
+  <button class="buttonView" style="margin-top: 45% " bindtap='submit' >
+    <text class="usermotto">确认修改</text>
+  </button>
+</view>

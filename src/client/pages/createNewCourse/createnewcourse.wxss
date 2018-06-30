@@ -1,0 +1,35 @@
+/* pages/createnewcourse/createnewcourse.wxss */
+/* pages/home/home.wxss */
+.courseInfo {
+  text-align: center;
+  font-size: 36rpx;
+}
+
+.section {
+  text-align: center;
+  margin-top: 10%;
+}
+
+.banner {
+  font-size: 40rpx;
+  color: #004D26;
+}
+
+input {
+  font-size: 36rpx;
+  border: 1rpx solid #004D26;
+  padding: 24rpx;
+  border-radius: 72rpx;
+  margin-left: 72rpx;
+  margin-right: 72rpx;
+  margin-top:12rpx;
+}
+
+button {
+  font-size: 36rpx;
+  padding: 12rpx;
+  border-radius: 72rpx;
+  width: 350rpx;
+  background-color: #FFF;
+  border: 1rpx solid silver;
+}

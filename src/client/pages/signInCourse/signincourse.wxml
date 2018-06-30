@@ -1,0 +1,29 @@
+<!--pages/sigincourse/signincourse.wxml-->
+ <view  style="margin-top: 10% ">
+ <!--当前时间地点信息-->
+  <view class='timeLocation'>
+    <!-- <view class='hint'>当前时间地点信息</view>
+    <view class='time'>{{time}}</view> 
+    <view class='location'>广东省广州市番禺区大学城中山大学东校区公教楼D栋</view> -->
+  </view>
+
+  <!--课程信息-->
+  <view class='courseInfo'>
+    <view class='hint'>当前课程</view>
+    <view class='courseName'>{{course_name}}</view>
+    <view class='courseId'>课程id：{{course_id}}</view>
+  </view>
+  
+  <!--签到剩余时间-->
+  <view class='hint'>签到结束时间：{{min}}m {{sec}}s</view>
+
+  <!--pin 码认证-->
+  <view wx:if="{{need_pin == 1}}"class="section">
+    <input class="input"name="pin" type="number" placeholder="请输入PIN码" bindinput='pinChange' />
+  </view>
+
+  <!--签到按钮-->
+  <button class="buttonView" style="margin-top: 10% " bindtap='signIn' >
+    <text class="usermotto">签到</text>
+  </button>
+</view>
