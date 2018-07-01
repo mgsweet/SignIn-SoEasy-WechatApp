@@ -9,6 +9,14 @@
 下面是原来仓库的截图
 ![](./images/repScreenCut.png)
 
+## How to open our App
+use your wechat and scan this:
+![](./images/qr.jpg)
+
+## If some run-time error occur
+1. 可能我们的服务器崩了，或者欠费了23333
+2. 请通知我 mgsweet@126.com
+
 ## How to Run
 1. replace all 'xxxxxxxxxx' with your own info, for example appid. 
 2. run the server following the tutorials on this webside: [自行部署wafer2](https://github.com/tencentyun/wafer2-startup/wiki/%E8%87%AA%E8%A1%8C%E9%83%A8%E7%BD%B2)
