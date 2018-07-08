@@ -10,7 +10,7 @@
 ![](./images/repScreenCut.png)
 
 ## How to open our App
-*use your wechat and scan this:*
+**Use your wechat and scan this:**
 
 ![](./images/qr.jpg)
 
