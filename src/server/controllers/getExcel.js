@@ -121,12 +121,12 @@ async function getExcel(ctx, next) {
 var transporter = nodemailer.createTransport({
     service: '163',
     auth: {
-        user: 'xxxxxxxxxx',//发送者邮箱
+        user: 'la_wechat@163.com',//发送者邮箱
         pass: 'xxxxxxxxxx' //邮箱第三方登录授权码
     },
     debug: true
 }, {
-        from: 'xxxxxxxxxx',//发送者邮箱
+        from: 'la_wechat@163.com',//发送者邮箱
         headers: {
             'X-Laziness-level': 1000
         }
@@ -202,6 +202,23 @@ function sendEmail(toEmail, open_id) {
         transporter.close();
     });
 };
+
+/*
+async function getExcel(ctx, next) {
+    // 检查签名，确认是微信发出的请求
+    const { signature, timestamp, nonce } = ctx.query;
+    if (!checkSignature(signature, timestamp, nonce)) ctx.body = 'ERR_WHEN_CHECK_SIGNATURE';
+
+    const body = ctx.request.body;
+    //生成xlsx文件
+    await makeXlsx(headersExample, dataExample, '123');
+
+    sendEmail('mgsweet@126.com', '123');
+
+    ctx.body = 'success';
+}
+
+*/
 
 module.exports = getExcel;
 
